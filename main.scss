@@ -1,0 +1,169 @@
+$Gris: #8d98a3;
+$Verde: #93D664; 
+$verde: #49b7b2;
+$azul: #6f69bc;
+$Violeta: #853c89;
+
+* {
+	font-family: Open Sans Condensed;
+}
+/*MENÚ LATERAL*/
+#container {
+    position: fixed;
+    overflow: visible; /*como que no hace nada*/
+    width: 70px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: table;
+    z-index: 1;
+}
+.section, {
+    position: static;
+   /* max-height: 140px; /* 25%; 33.33333%; */
+    height: 25vh; /*de su #container */
+    display: table-row;
+    text-align: center;
+}
+a.link {
+    display: table-cell;
+    vertical-align: middle;
+    /*line-height: 60px; no importa */
+    white-space:nowrap; /*IMPORTANTE*/
+    max-width:50px; /*IMPORTANTE tiende a hacerse ancho*/
+    font-size: 20px;
+	text-decoration: none;
+	text-transform: none;	
+	color: #f0f0f0;
+	margin-top: 25%; /*mientras - se va + hacia arriba*/
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+ /*Esto se convierte en un padding right, por la rotación*/
+}
+
+img.icon{
+	height: 35px;
+	width: 35px;
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+/*colores de divs delmenú*/
+.personal{
+    background-color: $verde;
+ /*top de página*/
+}
+.habilidades{
+    background-color: $Verde;
+}
+.experiencia{
+    background-color: $Violeta;
+}
+.otros{
+	background-color: $azul;
+}
+.personal:hover{
+	background-color: $Gris;
+}
+.habilidades:hover{
+	background-color: $Gris;
+}
+.experiencia:hover{
+	background-color: $Gris;
+}
+.otros:hover{
+	background-color: $Gris;	
+}
+/*CONTENIDO CENTRAL FIJO*/
+.ProfilePic{
+	position: relative;
+	margin-top: 5%;
+	height: 50vh;
+	width: auto;
+	border-radius: 100%;
+	border: solid 7px $azul;
+}
+#Name{
+    font-size: 45px;
+    margin-right: 10px !important;
+    margin-top: 20%;
+    color: $azul;
+    vertical-align: center;
+}
+#Sub{
+    font-size: 35px;
+    margin: 0;	
+    margin-top: 2%;
+}
+/*CONTENIDO CENTRAL VARIABLE*/
+/* index*/
+header.big-fixed{
+	position: fixed;
+	margin-left: 20%;
+}
+/* personal.html, logros-habilidades.html, experiencia.html */
+header.top{
+	position: fixed;
+	top: 0;
+	left: 6%;
+	height: 30vh;
+	width: 100%;
+    bottom: auto;
+    z-index: 2;
+    background-color: #fff;
+}
+header.top .ProfilePic{
+	height: 25vh;
+	width: auto;
+	border-radius: 100%;
+	border: solid 5px $azul;
+	margin-top: 5vh;
+}
+header.top h1{
+	margin-top: 5vh !important;
+}
+.content {
+    height: 1500px;
+    margin-top: 33vh;
+}
+
+
+/* /personal.html, /logros-habilidades.html, /experiencia.html */
+
+.personal h2{
+	color: $verde;
+}
+.habilidades h2{
+	color: $Verde;
+}
+.experiencia h2{
+	color: $Violeta;
+}
+
+.wrapper{
+    margin-left: 50px;
+    max-height: 100vh;
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (min-width: 368px)  and (max-width: 767px) {
+    body{
+    	width: 100vw;
+    }
+}
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px up to 991px) */
+@media (min-width: 768px)  and (max-width: 991px) {
+        body{
+        width: 100vw;
+    }
+}
+/* Medium devices (desktops, 992px up to 1999px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body{
+        width: 100vw;
+    }   
+}
